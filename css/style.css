@@ -4,10 +4,6 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
-body{
-
-}
 #header{
     width: 100%;
     height: 100%;
@@ -106,9 +102,6 @@ hr.topline{
     color: #CA1818;
     font-weight: 550;
     padding-bottom: 15px;
-}
-.clanak-text{
-
 }
 .biografija-naslov{
     font-size: 300%;
