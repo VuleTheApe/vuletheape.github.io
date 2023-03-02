@@ -6,7 +6,8 @@
 }
 
 body{
-    background-image: url("css/background-img.png");
+    background-image: url("background-img.png");
+    background-size: cover;
 
 }
 #header{
@@ -14,4 +15,25 @@ body{
     height: 100%vh;
     background-size: cover;
     background-position: center;
+}
+.myDiv {
+    border: 0px;
+    text-align: center;
+  }
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
 }
