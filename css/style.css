@@ -82,12 +82,12 @@ nav ul li static:hover{
 hr.topline{
     border: 1px solid #CA1818;
     border-radius: 5px;
-    margin-inline: 200px;
+    margin-inline: 10%;
 }
 hr.bottomline{
     border: 1px solid #CA1818;
     border-radius: 5px;
-    margin-inline: 200px;
+    margin-inline: 10%;
 }
 
 .grid-clanci{
