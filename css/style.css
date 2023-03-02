@@ -13,6 +13,7 @@ body{
     height: 100%;
     background-size: cover;
     background-position: center;
+    position: sticky;
 }
 .myDiv {
     border: 0px;
@@ -20,6 +21,8 @@ body{
   }
 .container{
     padding: 10px 10%;
+
+top: 0;
 }
 nav{
     display: flex;
@@ -59,4 +62,9 @@ nav ul li a:hover::after{
 edo{
     font-size: 80%;
     padding-left: 65px;
+}
+hr.topline{
+    border: 1px solid #CA1818;
+    border-radius: 5px;
+    margin-inline: 200px;
 }
