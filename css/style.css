@@ -75,7 +75,9 @@ nav ul li static:after{
     position: absolute;
     left: 0;
     bottom: -3px;
-    transition: 0.3s;
+}
+nav ul li static:hover{
+    cursor: pointer;
 }
 hr.topline{
     border: 1px solid #CA1818;
