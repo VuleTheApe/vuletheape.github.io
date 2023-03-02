@@ -88,7 +88,6 @@ hr.bottomline{
     border: 1px solid #CA1818;
     border-radius: 5px;
     margin-inline: 200px;
-    margin-top: 100px;
 }
 
 .grid-clanci{
@@ -167,8 +166,9 @@ textarea[type=textarea] {
 
 }
 .footer{
+    background-color: #FFF;
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     text-align: center;
     margin: 5px;
