@@ -31,6 +31,7 @@ nav{
     padding-left: 40px;
 }
 edo{
+    color: #696969;
     font-size: 80%;
     padding-left: 3%;
     font-weight: 600;
@@ -62,6 +63,7 @@ nav ul li a:hover::after{
     width: 100%;
 }
 nav ul li static{
+    font-weight: 530;
     color: #ca1818;
     text-decoration: none;
     font-size: 22px;
