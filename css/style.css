@@ -84,7 +84,12 @@ hr.topline{
     border-radius: 5px;
     margin-inline: 200px;
 }
-
+hr.bottomline{
+    border: 1px solid #CA1818;
+    border-radius: 5px;
+    margin-inline: 200px;
+    margin-top: 100px;
+}
 
 .grid-clanci{
     display: grid;
@@ -148,4 +153,13 @@ input[type=textarea] {
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
+}
+.footer{
+position: fixed;
+bottom: 0;
+width: 100%;
+text-align: center;
+}
+.developed {
+
 }
