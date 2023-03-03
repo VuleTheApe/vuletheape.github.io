@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    top: 0px;
+    bottom :0px;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+}
+.topbar{
+    height: 7%;
+    background-color: aqua;
+}
+.content{
+    background-color: blueviolet;
+    height: 88%;
+}
+.footbar{
+    background-color: coral;
+    height: 5%;
+    bottom: 0px;
+}
