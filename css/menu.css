@@ -6,8 +6,8 @@
 
 .nav {
     position: relative;
-    background-color: #fff;
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 25px;
     transition: 0.5s;
     border-radius: 50px;
     overflow: hidden;
@@ -28,7 +28,7 @@
 
 .menu li {
     list-style: none;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 .menu li a {
@@ -45,7 +45,7 @@
 
 .nav input {
     width: 40px;
-    height: 40px;
+    height: 20px;
     cursor: pointer;
     opacity: 0;
 }
