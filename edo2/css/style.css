@@ -109,7 +109,7 @@ button:hover {
     border-radius: 50px;
     justify-content: start;
 }
-.img-post {
+img.img-post {
     border: none;
     border-radius: 20px;
     width: 100%;
