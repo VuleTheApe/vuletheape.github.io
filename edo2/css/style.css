@@ -94,7 +94,9 @@ button:hover {
     width: 80vw;
     max-width: 1000px;
     margin: 30px;
-    border-radius: 50px;
+    border-radius: 20px;
+    box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.3);
+    background-color:rgba(199, 195, 195, 0.1); 
 }
 .gallery-content {
     display: grid;
@@ -108,21 +110,23 @@ button:hover {
     width: 60%;
     max-width: 500px;
     margin: 20px;
-    border-radius: 50px;
+    border-radius: 20px;
     justify-content: start;
 }
-img.img-post {
+.img-post {
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     width: 100%;
     height: auto;
     margin-bottom: 30px;
+/*    box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.3); */
 
 }
 .text{
     border-radius: 20px;
     padding: 20px 20px;
-    background-color:rgba(167, 163, 163, 0.1);
+
+
 }
 .footer {
     color:#EDF0F1;
