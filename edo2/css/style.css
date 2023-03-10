@@ -33,12 +33,26 @@ li, a, button {
     text-decoration: none;
     justify-self: flex-end;
 }
+logo1{
+    font-weight: bolder;
+    font-size: 35px;
+}
+logo2{
+    font-size: 35px;
+}
+logo3{
+    font-size: 12px;
+ 
+    letter-spacing: 5px;
+    padding-left: 1px;
+}
+
 .logo {
     cursor: pointer;
     color: #EDF0F1;
-
-    font-size: 35px;
     padding-left: 10px;
+    align-content: center;
+    
 }
 
 .nav_links {
