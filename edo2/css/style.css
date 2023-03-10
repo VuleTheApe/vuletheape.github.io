@@ -22,7 +22,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-right: 7vw;
+    padding-right: 10px;
     justify-content: end;
     width: 100%;;
 }
@@ -38,7 +38,7 @@ li, a, button {
 .logo {
 
     cursor: pointer;
-    padding-left: 7vw;
+    padding-left: 10px;
     align-content: center;
 }
 .logo-img {
