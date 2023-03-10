@@ -174,3 +174,22 @@ button:hover {
     display: flex;
     margin-top: 15px;
 }
+#myBtn {
+    position: fixed;
+    bottom: 22px;
+    right: 10%;
+    z-index: 1;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(0,136,169,1);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    width: 80px;
+  }
+  
+  #myBtn:hover {
+    background-color: rgb(3, 194, 241);
+  }
