@@ -13,6 +13,7 @@ header {
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: baseline;
     padding: 10px 10vw;
     background-color: #24252A;
     box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.6);
@@ -33,27 +34,17 @@ li, a, button {
     text-decoration: none;
     justify-self: flex-end;
 }
-logo1{
-    font-weight: bolder;
-    font-size: 35px;
-}
-logo2{
-    font-size: 35px;
-}
-logo3{
-    font-size: 12px;
- 
-    letter-spacing: 5px;
-    padding-left: 1px;
-}
 
 .logo {
+
     cursor: pointer;
-    color: #EDF0F1;
     padding-left: 10px;
     align-content: center;
-    
 }
+.logo-img {
+    height:60px;
+}
+
 
 .nav_links {
     list-style: none;
@@ -118,7 +109,7 @@ button:hover {
     border-radius: 50px;
     justify-content: start;
 }
-img {
+.img-post {
     border: none;
     border-radius: 20px;
     width: 100%;
