@@ -15,7 +15,7 @@ header {
     align-items: center;
     padding: 10px 10vw;
     background-color: #24252A;
-
+    box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.6);
 }
 .navigation {
     display: flex;
@@ -86,7 +86,7 @@ button:hover {
     flex-direction: column;
     width: 80vw;
     max-width: 1000px;
-    margin: 20px;
+    margin: 30px;
     border-radius: 50px;
 }
 .gallery-content {
@@ -125,5 +125,6 @@ img {
     bottom:0px;
     height: 30px;
     width: 100%;
+    box-shadow: -1px -5px 10px rgba(34, 34, 34, 0.6);
 
 }
