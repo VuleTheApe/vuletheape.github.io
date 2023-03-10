@@ -90,6 +90,16 @@ button:hover {
     box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.3);
     background-color:rgba(199, 195, 195, 0.1); 
 }
+.content-about {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    max-width: 1000px;
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.3);
+    background-color:rgba(199, 195, 195, 0.1); 
+}
 .img-post {
     border: none;
     border-radius: 15px;
@@ -196,3 +206,18 @@ button:hover {
   #myBtn:hover {
     background-color: rgb(3, 194, 241);
   }
+.img-about {
+    border: none;
+    border-radius: 15px;
+    margin: 10px 15px;
+    width: 20vw;
+    max-width: 500px;
+    min-width: 200px;
+    float: left;
+    flex: 0 0 auto;
+}
+.wraper-about {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}

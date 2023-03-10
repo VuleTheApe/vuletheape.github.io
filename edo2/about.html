@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Edo Hrzenjak</title>
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <a href="index.html">
+            <img src="galerija/logo.jpg" class="logo">
+            </a>
+            </div>
+            <div class="navigation-box">
+                <ul class="navigation-links">
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            <button>=</button>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="content-about">
+            <div class="wraper-about">
+            <img src="galerija/avatar.jpg" class="img-about">
+            <div class="text">
+                <p>
+                    2023</br>
+                    Ulje na platnu<br>
+                    150x80cm</br></br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quas debitis dignissimos dolorem nisi
+                    eaque fugit quis repudiandae sit vel! Accusamus alias similique possimus deleniti cum quibusdam, 
+                    quaerat voluptatum doloribus doloremque at saepe labore molestias reiciendis dolorum consequatur 
+                    omnis perspiciatis sint? Nesciunt rerum voluptatem impedit id aliquid velit fugiat tenetur 
+                    accusantium maxime a quia voluptatibus totam, amet quae aut labore magnam aspernatur, numquam 
+                    deserunt? Maxime, et! Eveniet iusto error enim molestias. Magni, id aliquam vel eum corporis 
+                    voluptatem similique porro illum eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quas debitis dignissimos dolorem nisi
+                    eaque fugit quis repudiandae sit vel! Accusamus alias similique possimus deleniti cum quibusdam, 
+                    quaerat voluptatum doloribus doloremque at saepe labore molestias reiciendis dolorum consequatur 
+                    omnis perspiciatis sint? Nesciunt rerum voluptatem impedit id aliquid velit fugiat tenetur 
+                    accusantium maxime a quia voluptatibus totam, amet quae aut labore magnam aspernatur, numquam 
+                    deserunt? Maxime, et! Eveniet iusto error enim molestias. Magni, id aliquam vel eum corporis 
+                    voluptatem similique porro illum eveniet.
+                </p>
+            </div>
+            </div>
+        </div>
+        <div class="content-post">
+            <div class="text">
+                <h1>Naslov</h1></br>
+                <p>
+                    &nbsp;2023</br>
+                    - Lorem ipsum dolor sit amet consectetur adipisicing elit.</br>
+                    - Facere quas debitis dignissimos dolorem</br></br>
+                    &nbsp;2020</br>
+                    - Accusamus alias similique possimus deleniti cum quibusdam</br>
+                    - Eveniet iusto error enim molestias.</br></br>
+                    
+                </p>
+            </div>
+        </div>
+
+        <div class="end">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <div class="footer"><p>Developed by Luka Vukalović © 2023</p></div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><h2>^</h2></button>
+<script>
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        mybutton.style.display = "block";
+        mybutton.style.zIndex = "1";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
+</html>
