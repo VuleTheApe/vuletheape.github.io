@@ -16,6 +16,7 @@ header {
     padding: 10px 10vw;
     background-color: #24252A;
     box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.6);
+    z-index: 2;
 }
 .navigation-box {
     display: flex;
@@ -101,7 +102,7 @@ button:hover {
 .text{
     border-radius: 20px;
     padding: 20px 20px;
-    z-index: 1;
+
 
 }
 .footer {
@@ -113,7 +114,7 @@ button:hover {
     height: 30px;
     width: 100%;
     box-shadow: -1px -5px 10px rgba(34, 34, 34, 0.6);
-
+    z-index: 2;
 }
 .gallery-content {
     display: flex;
@@ -121,13 +122,13 @@ button:hover {
     align-items: center;
     justify-content: center;
     justify-self: center;
-    padding-top: 70px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 .gallery-grid {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: 20% 20% 20%;
+    grid-template-columns: 35% 35%;
 
     align-items: center;
     justify-content: center;
@@ -141,22 +142,25 @@ button:hover {
     border-radius: 20px;
     box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.3);
     background-color:rgba(199, 195, 195, 0.1);
-    transition-duration: 0.5s;
+
 }
 .gallery-img {
     position:relative;
     border: none;
     border-radius: 15px;
-    height: 20%;
-    max-height: 500px;
-    min-height: 150px;
+    max-width: 450px;
     object-fit: cover;
-    transition-duration: 0.5s;
+    z-index: 0;
+    box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.3);
+    background-color:rgba(199, 195, 195, 0.1);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+
 }
 .gallery-img:hover {
     transform: scale(1.5);
-    z-index:inherit 1;
-    animation: spin 2s linear infinite;
+    z-index:1;
+
 }
 .dot {
     height: 25px;
