@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,77 +7,71 @@
     font-family: "Montserrat", sans-serif;
 }
 header {
-    position:fixed;
-    width: 100%;
-    height: 70px;
     display: flex;
+    position:fixed;
     align-items: center;
     justify-content: baseline;
+    width: 100%;
+    height: 70px;
     padding: 10px 10vw;
     background-color: #24252A;
     box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.6);
 }
-.navigation {
+.navigation-box {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-right: 10px;
     justify-content: end;
+    padding-right: 10px;
     width: 100%;;
 }
 li, a, button {
     font-family: "Montserrat", sans-serif;
+    justify-self: flex-end;
+    text-decoration: none;
     font-weight: 500;
     font-size: 16px;
     color: #EDF0F1;
-    text-decoration: none;
-    justify-self: flex-end;
 }
-
-.logo {
-
+.logo-box {
     cursor: pointer;
     padding-left: 10px;
     align-content: center;
 }
-.logo-img {
+.logo {
     min-height: 20px;
-    max-height:50px;
+    max-height:40px;
     width:auto;
 }
-
-
-.nav_links {
+.navigation-box {
     list-style: none;
     display: flex;
     flex-direction: row;
 }
-.nav_links li {
+.navigation-box li {
     display: inline-block;
     padding: 0px 10px;
 }
-.nav_links li a {
+.navigation-box li a {
     transition: all 0.3s ease 0s;
 }
-.nav_links li a:hover {
+.navigation-box li a:hover {
     color: #0088A9
 }
-
 button {
-    font-size: 40px;
-    padding: 0px 12px;
-    margin-left: 10px;
-    background-color: rgba(0,136,169,1);
+    cursor: pointer;
     border: none;
     border-radius: 50px;
-    cursor: pointer;
+    padding: 0px 12px;
+    margin-left: 10px;
+    font-size: 40px;
+    background-color: rgba(0,136,169,1);
     transition: all 0.3s ease 0s;
 }
-
 button:hover {
     background-color: rgb(3, 194, 241);
 }
-.home-content {
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,8 +80,7 @@ button:hover {
     padding-bottom: 100px;
     overflow-y: auto;
 }
-
-.home-post {
+.content-post {
     display: flex;
     flex-direction: column;
     width: 80vw;
@@ -97,21 +89,6 @@ button:hover {
     border-radius: 20px;
     box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.3);
     background-color:rgba(199, 195, 195, 0.1); 
-}
-.gallery-content {
-    display: grid;
-    padding-top: 70px;
-    padding-bottom: 100px;
-}
-
-.gallery-post {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    max-width: 500px;
-    margin: 20px;
-    border-radius: 20px;
-    justify-content: start;
 }
 .img-post {
     border: none;
