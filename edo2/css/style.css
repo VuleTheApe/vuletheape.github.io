@@ -142,12 +142,12 @@ button:hover {
     border-radius: 20px;
     justify-content: center;
     align-content: center;
-
 }
 .gallery-img {
     border: none;
     border-radius: 15px;
     width:90%;
+    max-width: 550px;
     object-fit: cover;
     z-index: 0;
     box-shadow: -1px 10px 15px rgba(34, 34, 34, 0.3);
