@@ -125,6 +125,7 @@ button:hover {
     width: 100%;
     box-shadow: -1px -5px 10px rgba(34, 34, 34, 0.6);
     z-index: 2;
+    padding: 6px;
 }
 .gallery-content {
     display: flex;
