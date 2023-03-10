@@ -42,7 +42,9 @@ li, a, button {
     align-content: center;
 }
 .logo-img {
-    height:60px;
+    min-height: 20px;
+    max-height:50px;
+    width:auto;
 }
 
 
