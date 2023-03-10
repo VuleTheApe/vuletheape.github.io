@@ -14,7 +14,8 @@ header {
     display: flex;
     align-items: center;
     padding: 10px 10vw;
-    background-color: #24252A
+    background-color: #24252A;
+
 }
 .navigation {
     display: flex;
