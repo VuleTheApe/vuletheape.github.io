@@ -7,23 +7,29 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Edo Hrzenjak</title>
 </head>
-<body>
+<body>    
     <header>
         <div class="logo-box">
             <a href="index.html">
             <img src="galerija/logo.jpg" class="logo">
             </a>
-            </div>
-            <div class="navigation-box">
-                <ul class="navigation-links">
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            <button>=</button>
-        </div>
+            </div><ul class="navigation-links">
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="dropdown">
+                <button>=</button>
+                <div class="dropdown-content">
+                  <a href="index.html#2023">2023</a>
+                  <a href="index.html#2019">2019</a>
+                  <a href="index.html#2016">2016</a>
+                </div>
+              </div>
     </header>
-
+<div class="spacer"></div>
     <div class="content">
+        <p class="godina" id="2023">2023</p>
+        <hr>
         <div class="content-post">
             <img src="galerija/slika2.jpg" class="img-post">
             <div class="text">
@@ -47,7 +53,7 @@
             <div class="text">
                 <h1>Naslov</h1>
                 <p>
-                    2023</br>
+                    2020</br>
                     Ulje na platnu<br>
                     150x80cm</br></br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quas debitis dignissimos dolorem nisi
@@ -59,13 +65,14 @@
                     voluptatem similique porro illum eveniet. 
                 </p>
             </div>
-        </div>
-        <div class="content-post">
+        </div><p class="godina" id="2019">2019</p>
+        <hr>
+        <div class="content-post" >
             <img src="galerija/slika6.jpg" class="img-post">
             <div class="text">
                 <h1>Naslov</h1>
                 <p>
-                    2023</br>
+                    2019</br>
                     Ulje na platnu<br>
                     150x80cm</br></br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quas debitis dignissimos dolorem nisi
@@ -83,7 +90,7 @@
             <div class="text">
                 <h1>Naslov</h1>
                 <p>
-                    2023</br>
+                    2019</br>
                     Ulje na platnu<br>
                     150x80cm</br></br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quas debitis dignissimos dolorem nisi
@@ -101,7 +108,7 @@
             <div class="text">
                 <h1>Naslov</h1>
                 <p>
-                    2023</br>
+                    202019</br>
                     Ulje na platnu<br>
                     150x80cm</br></br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quas debitis dignissimos dolorem nisi
@@ -113,13 +120,14 @@
                     voluptatem similique porro illum eveniet. 
                 </p>
             </div>
-        </div>
-        <div class="content-post">
+        </div><p class="godina" id="2016">2016</p>
+        <hr>
+        <div class="content-post" >
             <img src="galerija/slika5.jpg" class="img-post">
             <div class="text">
                 <h1>Naslov</h1>
                 <p>
-                    2023</br>
+                    2016</br>
                     Ulje na platnu<br>
                     150x80cm</br></br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quas debitis dignissimos dolorem nisi
@@ -140,9 +148,9 @@
         </div>
     </div>
     <div class="footer"><p>Developed by Luka Vukalović © 2023</p></div>
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><h2>^</h2></button>
+    <button onclick="topFunction()" id="to-top" title="Back to top"><h2>^</h2></button>
 <script>
-    let mybutton = document.getElementById("myBtn");
+    let mybutton = document.getElementById("to-top");
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
       if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
