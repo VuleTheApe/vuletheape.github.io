@@ -69,6 +69,22 @@
         </div>
     </div>
     <div class="footer"><p>Developed by Luka Vukalović © 2023</p></div>
-
+    <button onclick="topFunction()" id="to-top" title="Back to top"><h2>^</h2></button>
+<script>
+    let mybutton = document.getElementById("to-top");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        mybutton.style.display = "block";
+        mybutton.style.zIndex = "1";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 </body>
 </html>
