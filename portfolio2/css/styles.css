@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+*{
+    font-family: 'Questrial', sans-serif;
+    font-weight: 200;
+}
+:root {
+    --grid-works-column-width: min(22vw, 150px);
+    --grid-works-column-gap: min(3vw, 40px);
+  }
+  
+body {
+    display: grid;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    padding-top: 55px;
+    padding-left: 50px;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo h1 {
+    font-size:31px;
+    font-weight: 500;
+}
+.navigation-links{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 50px;
+}
+li {
+    list-style: none;
+    list-style-type: none;
+}
+.navigation-links a{
+    color: black;
+    font-size: 27px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 10px;
+}
+.navigation-links a:hover{
+    text-decoration-line:underline;
+    text-decoration-style:wavy;
+    font-weight: 600;
+}
+content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--grid-works-column-width));
+    grid-auto-columns: max-content;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    padding: 50px;
+}
+img {
+    width: 100%;
+    height: auto;
+    margin: 15px;
+
+}
+.line{
+    color: rgba(0, 0, 0, 0.1);
+    width: 95%;
+
+}
