@@ -7,7 +7,7 @@
     --grid-works-column-width: min(22vw, 150px);
     --grid-works-column-gap: min(3vw, 40px);
   }
-  
+
 body {
     display: grid;
     padding: 0px;
@@ -20,7 +20,7 @@ header{
     padding-top: 55px;
     padding-left: 50px;
     width: 100%;
-
+    height: 80px;
 }
 .logo{
     display: flex;
