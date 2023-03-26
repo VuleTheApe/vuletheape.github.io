@@ -1,0 +1,93 @@
+* {
+    font-family: "Lucida Console", "Courier New", monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor:context-menu;
+}
+body {
+    background-color: #f1faee;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin: 5% 10% 3% 10%;
+    padding: 15px;
+    background-color: #A0BAB1;
+    box-shadow: 12px 12px 0px 0px rgba(47, 64, 71, 0.212);
+}
+banner-title a {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    
+}
+
+banner-title a:hover {
+    transition-duration: 0.1s;
+    color: rgba(0, 0, 0, 0.75);
+}
+banner-title a:active {
+    color: black;
+
+}
+
+main {
+    display: flex;
+    margin: 0% 10% 10% 10%;
+}
+.sidebar {
+    padding: 1%;
+    margin-right: 5%;
+    width: 25%;
+    border-radius: 8px;
+    background-color: #A0BAB1;
+    box-shadow: 12px 12px 0px 0px rgba(47, 64, 71, 0.212);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2%;
+    border-radius: 8px;
+    background-color: #A0BAB1;
+    box-shadow: 12px 12px 0px 0px rgba(47, 64, 71, 0.212);
+    align-items: center;
+}
+.item-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 12vw 12vw 12vw 12vw;
+    grid-template-rows: 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw;
+    row-gap: 15px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    scrollbar-color: green;
+    padding: 3%;
+}
+img {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+input{
+    background-color: rgb(208, 225, 212);
+    width: 100%;
+    border-radius: 5px;
+    border: 0px;
+    padding: 5px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+p {
+    margin: 15px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+}
