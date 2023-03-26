@@ -24,7 +24,6 @@ banner-title a {
     font-weight: 700;
     color: rgba(0, 0, 0, 0.6);
     text-decoration: none;
-    
 }
 
 banner-title a:hover {
@@ -33,9 +32,7 @@ banner-title a:hover {
 }
 banner-title a:active {
     color: black;
-
 }
-
 main {
     display: flex;
     margin: 0% 10% 10% 10%;
