@@ -5,8 +5,10 @@
     padding: 0;
 }
 body {
-    padding: 5%;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
+    padding-top: 10vh;
 }
 img {
     margin: 5px;
@@ -14,7 +16,14 @@ img {
     float: left;
     border-radius: 5px;
 }
+ul {
+    
+    width: 100%;
+    max-width: 750px;
+    min-width: 300px;
+}
 li {
+    padding-inline: 2vw;
     margin: 15px;
     display: flex;
     border-radius: 5px;
