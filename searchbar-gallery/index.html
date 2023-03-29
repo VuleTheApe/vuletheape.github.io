@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Gallery</title>
+</head>
+<body>
+    <div class="search-wrapper">
+        <label for="search">Search Gallery:</label>
+        <input type="search" id="search" placeholder="Artist, type, description, price.." data-search>
+    </div>
+    <div class="user-cards" data-user-cards-container></div>
+
+    <template data-user-template>
+        <div class="card">
+            <div class="header" data-header></div>
+            <img class="image" data-image>
+            <div class="title" data-title></div>
+            <div class="type" data-type></div>
+            <div class="description" data-description></div>
+            <div class="price" data-price></div>
+        </div>    
+    </template>
+</body>
+</html>
