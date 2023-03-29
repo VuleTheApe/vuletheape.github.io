@@ -48,11 +48,9 @@ li:nth-child(even) {
 li:hover {
     background: #333;
     color: white;
-
 }
-li a:hover {
+li:hover > a {
     color: white;
-
 }
 p {
     display: inline-block;
