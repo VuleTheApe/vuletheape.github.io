@@ -6,7 +6,9 @@
 }
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
     padding-top: 10vh;
 }
@@ -17,10 +19,10 @@ img {
     border-radius: 5px;
 }
 ul {
-    
     width: 100%;
     max-width: 750px;
     min-width: 300px;
+    padding: 10px;
 }
 li {
     margin: 15px;
