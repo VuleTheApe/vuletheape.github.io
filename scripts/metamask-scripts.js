@@ -1,17 +1,23 @@
 let accountAddress;
+let connected = 0;
 document.getElementById("connect-wallet").addEventListener("click", event => {
-    let button = event.target;
-    ethereum.request({method: "eth_requestAccounts"}).then(accounts => {
-        accountAddress = accounts[0];
+    if (connected == 0){
+        let button = event.target;
+        ethereum.request({method: "eth_requestAccounts"}).then(accounts => {
+            accountAddress = accounts[0];
 
-        ethereum.request({method: "eth_getBalance", params: [accountAddress, "latest"]}).then(result =>{
-            let wei = parseInt(result,16);
-            let balance = wei / (10**18);
-            button.innerHTML = accountAddress;
-            document.getElementById("balance").innerHTML = balance.toFixed(4);
-            console.log(balance + "ETH");
+            ethereum.request({method: "eth_getBalance", params: [accountAddress, "latest"]}).then(result =>{
+                let wei = parseInt(result,16);
+                let balance = wei / (10**18);
+                button.innerHTML = accountAddress;
+                document.getElementById("balance").innerHTML = balance.toFixed(4);
+                console.log(balance + "ETH");
+            })
         })
-    })
+    } else {
+        navigator.clipboard.writeText(account);
+        console.log(account, " copied to clipboard");
+    }
 })
 document.getElementById("donate-button").addEventListener("click", () => {
     params = [{
