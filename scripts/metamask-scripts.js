@@ -13,6 +13,7 @@ document.getElementById("connect-wallet").addEventListener("click", event => {
                 console.log(balance + "ETH");
             })
         connected = 1;
+        document.getElementById("connect-wallet").title="Copy to clipboard";
         })
     } else {
         navigator.clipboard.writeText(accountAddress);
