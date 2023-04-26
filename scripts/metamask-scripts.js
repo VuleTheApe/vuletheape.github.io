@@ -1,5 +1,6 @@
-let accountAddress;
-let connected = 0;
+var accountAddress;
+var connected = 0;
+var balance = 0
 document.getElementById("connect-wallet").addEventListener("click", event => {
     if (connected == 0){
         let button = event.target;
@@ -8,12 +9,14 @@ document.getElementById("connect-wallet").addEventListener("click", event => {
             ethereum.request({method: "eth_getBalance", params: [accountAddress, "latest"]}).then(result =>{
                 let wei = parseInt(result,16);
                 let balance = wei / (10**18);
-                button.innerHTML = accountAddress;
-                document.getElementById("balance").innerHTML = balance.toFixed(4);
                 console.log(balance + "ETH");
             })
         connected = 1;
+        document.getElementById("balance").style.visibility = "visible";
+        document.getElementById("balance").innerHTML = balance.toFixed(4);
         document.getElementById("connect-wallet").title="Copy to clipboard";
+        document.getElementById("connect-wallet-wrapper").innerHTML += '<img id="copy-ico" class="copy-ico" src="thumbs/copy-icon.svg"></img>';
+        document.getElementById("connect-wallet").innerHTML = accountAddress;
         })
     } else {
         navigator.clipboard.writeText(accountAddress);
