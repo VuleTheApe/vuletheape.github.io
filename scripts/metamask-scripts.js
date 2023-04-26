@@ -5,7 +5,7 @@ document.getElementById("connect-wallet").addEventListener("click", event => {
         let button = event.target;
         ethereum.request({method: "eth_requestAccounts"}).then(accounts => {
             accountAddress = accounts[0];
-
+            connected == 1
             ethereum.request({method: "eth_getBalance", params: [accountAddress, "latest"]}).then(result =>{
                 let wei = parseInt(result,16);
                 let balance = wei / (10**18);
