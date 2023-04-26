@@ -15,8 +15,8 @@ document.getElementById("connect-wallet").addEventListener("click", event => {
             })
         })
     } else {
-        navigator.clipboard.writeText(account);
-        console.log(account, " copied to clipboard");
+        navigator.clipboard.writeText(accountAddress);
+        console.log(accountAddress, " copied to clipboard");
     }
 })
 document.getElementById("donate-button").addEventListener("click", () => {
