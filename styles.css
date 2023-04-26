@@ -9,7 +9,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     padding-top: 10vh;
 }
 img {
