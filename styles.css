@@ -54,6 +54,14 @@ button:active {
     background-size: 30px;
     background-position: 6px;
     padding-left: 45px;
+    background-color:rgb(243, 243, 239);
+    box-shadow: 3px 3px 0px 0px rgba(47, 64, 71, 0.212);
+}
+.donate-button:hover {
+    background-color:#FFF;
+}
+.donate-button:active {
+    box-shadow: none;
 }
 content {
     display: flex;
