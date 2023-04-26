@@ -56,6 +56,7 @@ button:active {
     padding-left: 45px;
     background-color:rgb(243, 243, 239);
     box-shadow: 3px 3px 0px 0px rgba(47, 64, 71, 0.212);
+    margin-bottom: 50px;
 }
 .donate-button:hover {
     background-color:#FFF;
