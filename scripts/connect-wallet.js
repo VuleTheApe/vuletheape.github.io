@@ -9,7 +9,6 @@ document.getElementById("connect-wallet").addEventListener("click", event => {
             let balance = wei / (10**18);
             button.innerHTML = accountAddress;
             document.getElementById("balance").innerHTML = balance.toFixed(4);
-            console.log(balance + "ETH");
         })
     })
 })
