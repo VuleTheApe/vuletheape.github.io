@@ -1,6 +1,6 @@
 const searchInput = document.querySelector("[data-search]")
 //Pronadi "data-user-cards-container" dio dokumenta na html-u i spremi u "userCardContainer"
-const userCardContainer = document.querySelector("[data-user-cards-container")
+const userCardContainer = document.querySelector("[data-user-cards-container]")
 //Pronadi "data-user-template" dio dokumenta na html-u i spremi u "userCardTemplate"
 const userCardTemplate = document.querySelector("[data-user-template]")
 
