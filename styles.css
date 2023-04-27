@@ -47,6 +47,7 @@ button {
     padding:6px 5px 6px 32px;
     border-width: 1px;
     border-radius: 3px;
+    transition: 0.1s ease-out;
 }
 button:hover {
     background-color: #FFF;
@@ -90,6 +91,13 @@ content {
     float: left;
     border-radius: 5px;
 }
+.plus-ico {
+    margin: 6px;
+    width: 15px;
+    height: 15px;
+    background-color: #FFF;
+    border-radius: 3px;
+}
 ul {
     width: 100%;
     max-width: 750px;
@@ -101,8 +109,9 @@ li {
     display: flex;
     border-radius: 5px;
     box-shadow: 8px 8px 0px 0px rgba(47, 64, 71, 0.212);
-    transition: 0.2s;
-
+    transition: 0.1s;
+    width: 750px;
+    padding-inline: 5px;
 }
 li a {
     display: flex;
@@ -110,17 +119,17 @@ li a {
     width: 100%;
     text-decoration: none;
     color: black;
-    transition: 0.2s;
+    transition: 0.5s;
 
 }
 li:nth-child(odd) {
-    background: rgb(240, 240, 235);
+    background-color: rgb(240, 240, 235);
 }
 li:nth-child(even) {
-    background: rgb(240, 240, 250);
+    background-color: rgb(240, 240, 250);
 }
 li:hover {
-    background: #333;
+    background-color: #333;
     color: white;
 }
 li:hover > a {
@@ -131,4 +140,5 @@ p {
     margin: 5px;
     overflow: hidden;
     text-overflow: break-word;
+    width: 100%;
 }

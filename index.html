@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="thumbs/root-icon.ico">
     <link rel="stylesheet" href="styles.css">
     <script src="scripts/metamask-scripts.js" defer></script>
+    <script src="scripts/show-hide.js" defer></script>
     <title>ROOT</title>
 </head>
 <body>
@@ -22,13 +23,14 @@
     <content>
         <ul>
             <li>
-                <a href="#">
+                <a onclick="pythonList()" href="#">
                     <p>
                         <b> Python:</b>
-                    </p>    
+                    </p>
+                    <img id="python-plus-ico" class="plus-ico" src="thumbs/minus.png">
                 </a>
             </li>
-            <li>
+            <li id="python-item-1" style="display: flex;">
                 <a href="https://github.com/luka43/bob-keep">
                     <img class="thumbnail" src="thumbs/bob-keep.ico" alt="">
                     <p><b> BOB Keep </b> <br>
@@ -45,13 +47,14 @@
         </ul>
         <ul>
             <li>
-                <a href="#">
+                <a onclick="webdevelopmentList()" href="#">
                     <p>
                         <b>Web development:</b>
                     </p>    
+                    <img id="webdev-plus-ico" class="plus-ico" src="thumbs/minus.png">
                 </a>
             </li>
-            <li>
+            <li id="webdev-item-1" style="display: flex;">
                 <a href="portfolio2/index.html">
                     <img class="thumbnail" src="thumbs/portfolio2.png" alt="">
                     <p> <b>Practice: Portfolio 2 </b><br>
@@ -61,7 +64,7 @@
                     </p>  
                 </a>
             </li>
-            <li>
+            <li id="webdev-item-2" style="display: flex;">
                 <a href="portfolio3/index.html">
                     <img  class="thumbnail" src="thumbs/portfolio3.png" alt="">
                     <p> <b>Practice: Portfolio 3 </b><br>
@@ -71,7 +74,7 @@
                     </p>
                 </a>
             </li>
-            <li>
+            <li id="webdev-item-3" style="display: flex;">
                 <a href="searchbar-gallery/index.html">
                     <img class="thumbnail" src="thumbs/searchbar-gallery.png" alt="">
                     <p>
@@ -82,7 +85,7 @@
                     </p>
                 </a>
             </li>
-            <li>
+            <li id="webdev-item-4" style="display: flex;">
                 <a href="dGal/index.html">
                     <img class="thumbnail" src="thumbs/dgal.png" alt="">
                     <p> <b>D-Gall </b><br> 
