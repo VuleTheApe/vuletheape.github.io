@@ -35,18 +35,16 @@ footer {
     background-position: 6px;
     min-height: 20px;
 }
-wrapper {
-    position: relative;
-
-}
 .copy-ico {
+    display: none;
     background-color:#FFF;
     right: 0px;
-    position: absolute;
     width: 15px;
+    float: right;
+    margin-left: 5px;
 }
 button {
-    padding:6px 22px 6px 32px;
+    padding:6px 5px 6px 32px;
     border-width: 1px;
     border-radius: 3px;
 }
@@ -62,6 +60,7 @@ button:active {
     background: url(thumbs/metamask2.ico) no-repeat left center;
     background-size: 20px;
     background-position: 6px;
+    align-content: center;
 }
 .donate-button {
     background: url(thumbs/cafe.png) no-repeat left center;
@@ -84,7 +83,7 @@ content {
     align-items: center;
     padding: 15px 0px 0px 0px;
 }
-img {
+.thumbnail {
     margin: 5px;
     width: 100px;
     max-height: 100px;
