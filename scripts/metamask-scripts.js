@@ -11,21 +11,19 @@ document.getElementById("connect-wallet").addEventListener("click", () => {
             ethereum.request({method: "eth_getBalance", params: [accountAddress, "latest"]}).then(result =>{
                 let wei = parseInt(result,16);
                 balance = wei / (10**18);
-                console.log(balance + "ETH");
                 document.getElementById("balance").innerHTML = balance.toFixed(5);
 
             });
 
         connected = 1;
         document.getElementById("balance").style.visibility = "visible";
-
         document.getElementById("connect-wallet").title="Copy to clipboard";
         document.getElementById("button-text").innerHTML = accountAddress;
         document.getElementById("copy-ico").style.display = "block";
         })
     }
     else if (connected == 1) {
-        console.log(accountAddress, " copied to clipboard");
+        navigator.clipboard.writeText(accountAddress);
     }
 });
 
