@@ -111,7 +111,9 @@ li {
     box-shadow: 8px 8px 0px 0px rgba(47, 64, 71, 0.212);
     transition: 0.1s;
     width: 750px;
+    max-height: 500px;
     padding-inline: 5px;
+    transition: max-height 0.5s ease-out;
 }
 li a {
     display: flex;
