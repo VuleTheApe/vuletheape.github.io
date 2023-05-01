@@ -52,6 +52,7 @@ content {
 }
 footer {
     justify-content: center;
+    margin: 0px;
 }
 button {
     padding:10px 5px 6px 32px;
@@ -72,7 +73,6 @@ ul {
     display: flex;
     flex-direction: column;
     width: 95%;
-
 }
 li {
     display: flex;
@@ -144,6 +144,7 @@ p {
     background-size: 30px;
     background-position: 6px;
     padding-left: 45px;
+    margin: 15px;
     background-color:rgb(243, 243, 239);
     box-shadow: 3px 3px 0px 0px rgba(47, 64, 71, 0.212);
 }
