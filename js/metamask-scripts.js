@@ -29,10 +29,9 @@ document.getElementById("donate-button").addEventListener("click", () => {
 
 async function checkMetamask() {
     accounts = await ethereum.request({method: 'eth_accounts'});
-    balance =  parseInt(await ethereum.request({method: "eth_getBalance", params: [accounts[0], "latest"]}), 16);
-    balance = balance / (10**18);
-
+    balance =  await ethereum.request({method: "eth_getBalance", params: [accounts[0], "latest"]});
     if (accounts.length) {
+        balance = parseInt(balance, 16) / (10**18);
         account = accounts[0].substring(0, 6) + ".." + accounts[0].substring(accounts[0].length - 6);
         updateButtonText();
     } else {
