@@ -1,40 +1,53 @@
-function pythonDropdown() {
-    var item = document.getElementById("python-item");
+document.getElementById("python-title").addEventListener("click", () =>{
+
+    var list = document.getElementById("python-list").children;
     var dropdownIcon = document.getElementById("python-plus-icon");
-    if (item.style.maxHeight === "0px") {
-
-        item.style.maxHeight = "500px";
+    console.log(list[0].style.maxHeight);
+    if (list[0].style.maxHeight === "0px") {
 
         dropdownIcon.src = "images/icons/minus-icon.png";
-    }
-    else if (item.style.maxHeight === "500px"){
 
-        item.style.maxHeight = "0px";
+        for (let i = 0; i < list.length; i++){
+            list[i].style.maxHeight = "500px";
+            console.log(i);
+
+        }
+    }
+    else if (list[0].style.maxHeight === "500px"){
+
         dropdownIcon.src = "images/icons/plus-icon.png";
-    }
-  }
 
-  function webdevDropdown() {
-    var item1 = document.getElementById("webdev-item-1");
-    var item2 = document.getElementById("webdev-item-2");
-    var item3 = document.getElementById("webdev-item-3");
-    var item4 = document.getElementById("webdev-item-4");
+        for (let i = 0; i < list.length; i++){
+            list[i].style.maxHeight = "0px";
+            console.log(i);
+
+        }
+    }
+});
+
+document.getElementById("webdev-title").addEventListener("click", () =>{
+
+    var list = document.getElementById("webdev-list").children;
     var dropdownIcon = document.getElementById("webdev-plus-icon");
-    if (item1.style.maxHeight === "0px") {
-
-        item1.style.maxHeight = "500px";
-        item2.style.maxHeight = "500px";
-        item3.style.maxHeight = "500px";
-        item4.style.maxHeight = "500px";
+    console.log(list[0].style.maxHeight);
+    if (list[0].style.maxHeight === "0px") {
 
         dropdownIcon.src = "images/icons/minus-icon.png";
-    }
-    else if (item1.style.maxHeight === "500px"){
 
-        item1.style.maxHeight = "0px";
-        item2.style.maxHeight = "0px";
-        item3.style.maxHeight = "0px";
-        item4.style.maxHeight = "0px";
-        dropdownIcon.src = "images/icons/plus-icon.png";
+        for (let i = 0; i < list.length; i++){
+            list[i].style.maxHeight = "500px";
+            console.log(i);
+
+        }
     }
-  }
+    else if (list[0].style.maxHeight === "500px"){
+
+        dropdownIcon.src = "images/icons/plus-icon.png";
+
+        for (let i = 0; i < list.length; i++){
+            list[i].style.maxHeight = "0px";
+            console.log(i);
+
+        }
+    }
+});
