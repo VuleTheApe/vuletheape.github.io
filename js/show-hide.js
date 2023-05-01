@@ -2,7 +2,7 @@ document.getElementById("python-title").addEventListener("click", () =>{
 
     var list = document.getElementById("python-list").children;
     var dropdownIcon = document.getElementById("python-plus-icon");
-    console.log(list[0].style.maxHeight);
+
     if (list[0].style.maxHeight === "0px") {
 
         dropdownIcon.src = "images/icons/minus-icon.png";
@@ -25,7 +25,7 @@ document.getElementById("webdev-title").addEventListener("click", () =>{
 
     var list = document.getElementById("webdev-list").children;
     var dropdownIcon = document.getElementById("webdev-plus-icon");
-    console.log(list[0].style.maxHeight);
+
     if (list[0].style.maxHeight === "0px") {
 
         dropdownIcon.src = "images/icons/minus-icon.png";
