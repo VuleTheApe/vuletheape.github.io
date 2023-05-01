@@ -4,35 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="thumbs/root-icon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts/metamask-scripts.js" defer></script>
-    <script src="scripts/show-hide.js" defer></script>
-    <title>ROOT</title>
+    <link rel="icon" type="image/x-icon" href="images/root-icon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/metamask-scripts.js" defer></script>
+    <script src="js/show-hide.js" defer></script>
+    <title>luka43/root/</title>
 </head>
 <body>
     <header>
-        <div class="balance" id="balance"></div>
-        <wrapper id="connect-wallet-wrapper">
-        <button class="connect-wallet" id="connect-wallet" title="Connect MetaMask">
+        <div class="wallet-balance" id="wallet-balance"></div>
+        <button class="wallet-connect" id="wallet-connect" title="Connect MetaMask">
             <span id="button-text">Connect Wallet</span>
-            <img id="copy-ico" class="copy-ico" src="thumbs/copy-icon.svg">
+            <img id="copy-icon" class="copy-icon" src="images/icons/copy-icon.svg">
         </button>
-        </wrapper>
     </header>
     <content>
+        <div class="dropdown-category">
+            <a onclick="pythonDropdown()">
+                <p>
+                    <b>Python: </b>
+                </p>
+                <img id="python-plus-icon" class="category-plus-icon" src="images/icons/minus-icon.png">
+            </a>
+        </div>
         <ul>
-            <li>
-                <a onclick="pythonList()" href="#">
-                    <p>
-                        <b> Python:</b>
-                    </p>
-                    <img id="python-plus-ico" class="plus-ico" src="thumbs/minus.png">
-                </a>
-            </li>
-            <li id="python-item-1" >
+            <li id="python-item" style="max-height: 500px;">
                 <a href="https://github.com/luka43/bob-keep">
-                    <img class="thumbnail" src="thumbs/bob-keep.ico" alt="">
+                    <img class="thumbnail" src="images/bob-keep.ico" alt="">
                     <p><b> BOB Keep </b> <br>
                         github.com/luka43/bob-keep/ <br><br>
 
@@ -41,22 +39,22 @@
                         personal debts etc.
                         <br><br>
                         version: 2.1.1
-                    </p>    
+                    </p>
                 </a>
             </li>
         </ul>
+        <div class="dropdown-category">
+            <a onclick="webdevDropdown()">
+                <p>
+                    <b>Web development: </b>
+                </p>
+                <img id="webdev-plus-icon" class="category-plus-icon" src="images/icons/minus-icon.png">
+            </a>
+        </div>
         <ul>
-            <li>
-                <a onclick="webdevelopmentList()" href="#">
-                    <p>
-                        <b>Web development:</b>
-                    </p>    
-                    <img id="webdev-plus-ico" class="plus-ico" src="thumbs/minus.png">
-                </a>
-            </li>
-            <li id="webdev-item-1" >
+            <li id="webdev-item-1" style="max-height: 500px;">
                 <a href="portfolio2/index.html">
-                    <img class="thumbnail" src="thumbs/portfolio2.png" alt="">
+                    <img class="thumbnail" src="images/portfolio2.png" alt="">
                     <p> <b>Practice: Portfolio 2 </b><br>
                         ./portfolio2/ <br>
                         HTML/CSS/JAVASCRIPT <br>
@@ -64,9 +62,9 @@
                     </p>  
                 </a>
             </li>
-            <li id="webdev-item-2" >
+            <li id="webdev-item-2" style="max-height: 500px;">
                 <a href="portfolio3/index.html">
-                    <img  class="thumbnail" src="thumbs/portfolio3.png" alt="">
+                    <img  class="thumbnail" src="images/portfolio3.png" alt="">
                     <p> <b>Practice: Portfolio 3 </b><br>
                         ./portfolio3/ <br>
                         HTML/CSS/JAVASCRIPT <br>
@@ -74,9 +72,9 @@
                     </p>
                 </a>
             </li>
-            <li id="webdev-item-3" >
+            <li id="webdev-item-3" style="max-height: 500px;">
                 <a href="searchbar-gallery/index.html">
-                    <img class="thumbnail" src="thumbs/searchbar-gallery.png" alt="">
+                    <img class="thumbnail" src="images/searchbar-gallery.png" alt="">
                     <p>
                         <b>Practice: Search and filter .json gallery database </b><br> 
                         ./searchbar-gallery/ <br>
@@ -85,9 +83,9 @@
                     </p>
                 </a>
             </li>
-            <li id="webdev-item-4" >
+            <li id="webdev-item-4" style="max-height: 500px;">
                 <a href="dGal/index.html">
-                    <img class="thumbnail" src="thumbs/dgal.png" alt="">
+                    <img class="thumbnail" src="images/dgal.png" alt="">
                     <p> <b>D-Gall </b><br> 
                         ./dGal/ <br>
                         HTML/CSS/JAVASCRIPT<br>
@@ -95,12 +93,11 @@
                     </p>
                 </a>
             </li>
-        </ul>
-        <button class="donate-button" id="donate-button" title="Buy me a coffee">
-            Buy me a coffee<br>0.0003 ETH
-        </button>
+            </ul>
+            <button class="donate-button" id="donate-button" title="Buy me a coffee">
+                Buy me a coffee<br>0.0003 ETH
+            </button>
     </content>
-
     <footer>
         2023 © luka43
     </footer>
