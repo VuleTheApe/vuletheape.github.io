@@ -11,6 +11,7 @@ body {
     align-items: center;
 }
 header, footer {
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,7 +80,7 @@ li {
     margin: 15px 0 15px 0;
     border-radius: 5px;
     box-shadow: 8px 8px 0px 0px rgba(47, 64, 71, 0.212);
-    transition: max-height 0.2s ease, background-color 0.1s, color 0.1s;
+    transition: max-height 0.4s ease-in-out, background-color 0.1s, color 0.1s;
 }
 li:nth-child(odd) {
     background-color: rgb(240, 240, 250);
