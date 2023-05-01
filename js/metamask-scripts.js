@@ -1,5 +1,6 @@
 window.onload = () => {
     checkMetamask();
+    ethereum.on('accountsChanged', walletDisconnected);
  };
 
 document.getElementById("wallet-connect").addEventListener("click", () => {
@@ -7,7 +8,6 @@ document.getElementById("wallet-connect").addEventListener("click", () => {
     if (accounts.length) {
         navigator.clipboard.writeText(accounts[0]);
     } else {
-        console.log(accounts.length)
         connectMetamask();
     }
 });
@@ -29,15 +29,15 @@ document.getElementById("donate-button").addEventListener("click", () => {
 
 async function checkMetamask() {
     accounts = await ethereum.request({method: 'eth_accounts'});
+    metamaskConected = !!accounts.length;
+    if (metamaskConected){
     balance =  await ethereum.request({method: "eth_getBalance", params: [accounts[0], "latest"]});
-    if (accounts.length) {
-        balance = parseInt(balance, 16) / (10**18);
-        account = accounts[0].substring(0, 6) + ".." + accounts[0].substring(accounts[0].length - 6);
-        updateButtonText();
-    } else {
-    console.log("Metamask is not connected");
+    balance = parseInt(balance, 16) / (10**18);
+    account = accounts[0].substring(0, 6) + ".." + accounts[0].substring(accounts[0].length - 6);
+    updateButtonText();
     }
 }
+
 
 async function connectMetamask() {
     accounts = await ethereum.request({method: "eth_requestAccounts"});
@@ -55,4 +55,12 @@ function updateButtonText() {
     document.getElementById("button-text").innerHTML = account;
     document.getElementById("copy-icon").style.display = "block";
     document.getElementById("wallet-connect").title="Copy to clipboard";
+}
+
+function walletDisconnected() {
+    document.getElementById("wallet-balance").innerHTML = "";
+    document.getElementById("wallet-balance").style.visibility = "hidden";
+    document.getElementById("button-text").innerHTML = "Connect Wallet";
+    document.getElementById("copy-icon").style.display = "none";
+    document.getElementById("wallet-connect").title="Connect MetaMask";
 }
