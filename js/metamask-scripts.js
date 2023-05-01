@@ -5,7 +5,7 @@ window.onload = () => {
 
 document.getElementById("wallet-connect").addEventListener("click", () => {
 
-    if (accounts.length) {
+    if (metamaskConected) {
         navigator.clipboard.writeText(accounts[0]);
     } else {
         connectMetamask();
@@ -31,21 +31,27 @@ async function checkMetamask() {
     accounts = await ethereum.request({method: 'eth_accounts'});
     metamaskConected = !!accounts.length;
     if (metamaskConected){
-    balance =  await ethereum.request({method: "eth_getBalance", params: [accounts[0], "latest"]});
-    balance = parseInt(balance, 16) / (10**18);
-    account = accounts[0].substring(0, 6) + ".." + accounts[0].substring(accounts[0].length - 6);
-    updateButtonText();
+        balance =  await ethereum.request({method: "eth_getBalance", params: [accounts[0], "latest"]});
+        balance = parseInt(balance, 16) / (10**18);
+        account = accounts[0].substring(0, 6) + ".." + accounts[0].substring(accounts[0].length - 6);
+        updateButtonText();
     }
 }
 
 
 async function connectMetamask() {
-    accounts = await ethereum.request({method: "eth_requestAccounts"});
-    balance_result = await ethereum.request({method: "eth_getBalance", params: [accounts[0], "latest"]});
-    let wei = parseInt(balance_result,16);
-    balance = wei / (10**18);
-    updateButtonText();
-
+    try {
+        accounts = await ethereum.request({method: "eth_requestAccounts"});
+    } catch (error) {
+        console.log("Error : ", error);
+    }
+    metamaskConected = !!accounts.length;
+    if (metamaskConected){
+        balance_result = await ethereum.request({method: "eth_getBalance", params: [accounts[0], "latest"]});
+        let wei = parseInt(balance_result,16);
+        balance = wei / (10**18);
+        updateButtonText();
+    }
 }
 
 function updateButtonText() {
@@ -58,9 +64,12 @@ function updateButtonText() {
 }
 
 function walletDisconnected() {
+    metamaskConected = false;
+    accounts = [];
     document.getElementById("wallet-balance").innerHTML = "";
     document.getElementById("wallet-balance").style.visibility = "hidden";
     document.getElementById("button-text").innerHTML = "Connect Wallet";
     document.getElementById("copy-icon").style.display = "none";
     document.getElementById("wallet-connect").title="Connect MetaMask";
+
 }
