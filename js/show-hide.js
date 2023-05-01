@@ -9,8 +9,6 @@ document.getElementById("python-title").addEventListener("click", () =>{
 
         for (let i = 0; i < list.length; i++){
             list[i].style.maxHeight = "500px";
-            console.log(i);
-
         }
     }
     else if (list[0].style.maxHeight === "500px"){
@@ -19,8 +17,6 @@ document.getElementById("python-title").addEventListener("click", () =>{
 
         for (let i = 0; i < list.length; i++){
             list[i].style.maxHeight = "0px";
-            console.log(i);
-
         }
     }
 });
@@ -36,8 +32,6 @@ document.getElementById("webdev-title").addEventListener("click", () =>{
 
         for (let i = 0; i < list.length; i++){
             list[i].style.maxHeight = "500px";
-            console.log(i);
-
         }
     }
     else if (list[0].style.maxHeight === "500px"){
@@ -46,8 +40,6 @@ document.getElementById("webdev-title").addEventListener("click", () =>{
 
         for (let i = 0; i < list.length; i++){
             list[i].style.maxHeight = "0px";
-            console.log(i);
-
         }
     }
 });
