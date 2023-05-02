@@ -48,16 +48,16 @@
 </div>
 <script>
 function imagePreview(element) {
-        console.log(element.src)
-        url = element.src;
-        document.getElementById("image-preview-box").style.display = "flex";
-        document.getElementById("image-preview").src = url;
-        document.getElementById("body").style = "overflow: hidden"
+    console.log(element.src)
+    url = element.src;
+    document.getElementById("image-preview-box").style.display = "flex";
+    document.getElementById("image-preview").src = url;
+    document.getElementById("body").style = "overflow: hidden"
 }
 function closeImagePreview() {
-        document.getElementById("image-preview-box").style.display = "none";
-        document.getElementById("image-preview").src = "";
-        document.getElementById("body").style = "overflow: auto"
+    document.getElementById("image-preview-box").style.display = "none";
+    document.getElementById("image-preview").src = "";
+    document.getElementById("body").style = "overflow: auto"
 }
 </script>
 </html>
