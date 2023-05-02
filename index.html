@@ -1,68 +1,94 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/root-icon.ico">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/scrollbar.css">
-    <script src="js/to-top.js" defer></script>
-    <script src="js/gallery.js" defer></script>
-    <title>d-Gal</title>
+    <script src="js/metamask-scripts.js" defer></script>
+    <script src="js/show-hide.js" defer></script>
+    <title>luka43/root/</title>
 </head>
-<body id="body">
-    <header id="">
-        <banner-title><a href="index.html">D-Gall</a></banner-title>
+<body>
+    <header>
+        <div class="wallet-balance" id="wallet-balance"></div>
+        <button class="wallet-connect" id="wallet-connect" title="Connect MetaMask">
+            <span id="button-text">Connect Wallet</span>
+            <img id="copy-icon" class="copy-icon" src="images/icons/copy-icon.svg">
+        </button>
     </header>
-    <div class="menu-bar">Menu Bar</div>
-    <main>
-        <div class="sidebar">
-            {ITEM FILTER} <br><br>
-
-            <input placeholder="Artist name" data-search>
-            <br><br>
-            Item category: <br>
-            <ul id="item-category">
-            <li onclick="filterCategory('canvas')">Canvas</li>
-            <li onclick="filterCategory('print')">Print</li>
-            <li onclick="filterCategory('sculpture')">Sculpture</li>
-            <li onclick="filterCategory('mold casting')">Mold casting</li>
-            <li onclick="filterCategory('analog photo')">Analog photo</li>
-            <li onclick="filterCategory('all')">All</li>
-            </ul>
-            <br>
-            Item year: <br>
-            From: <input placeholder="1987"> <br>
-            To: <input placeholder="2023"> <br>
-            <br>
-            Item price-current: <br>
-            From: <input placeholder="10"> <br>
-            To: <input placeholder="15000"> <br>
-            <br>
-            Item price-last: <br>
-            From: <input placeholder="10"> <br>
-            To: <input placeholder="15000"> <br>
-            <br>
-            <button>Search</button>&nbsp;<button>Reset</button>
+    <content>
+        <div class="dropdown-category" id="python-title">
+            <a href="#">
+                <p>
+                    <b>Python: </b>
+                </p>
+                <img id="python-plus-icon" class="category-plus-icon" src="images/icons/minus-icon.png">
+            </a>
         </div>
-        <div class="container">
-            <div class="item-grid" data-user-cards-container></div>
-            </div>
+        <ul id="python-list">
+            <li id="python-item" style="max-height: 500px;">
+                <a href="https://github.com/luka43/bob-keep">
+                    <img class="thumbnail" src="images/bob-keep.ico" alt="">
+                    <p><b> BOB Keep </b> <br>
+                        github.com/luka43/bob-keep/ <br><br>
 
-    </main>
-    <button onclick="topFunction()" id="to-top" title="Back to top"><h2>^</h2></button>
-    <div class="image-preview-box" id="image-preview-box" onclick="closeImagePreview()">
-        <img src="" id="image-preview" class="image-preview">
-    </div>
+                        Helps keeping track with client debt list.
+                        Good for night-bar, caffe-bar, pub, restaurants, shops,
+                        personal debts etc.
+                        <br><br>
+                        version: 2.1.1
+                    </p>
+                </a>
+            </li>
+        </ul>
+        <div class="dropdown-category" id="webdev-title">
+            <a href="#">
+                <p>
+                    <b>Web development: </b>
+                </p>
+                <img id="webdev-plus-icon" class="category-plus-icon" src="images/icons/minus-icon.png">
+            </a>
+        </div>
+        <ul id="webdev-list">
+            <li id="webdev-item-1" style="max-height: 500px;">
+                <a href="portfolio2/index.html">
+                    <img class="thumbnail" src="images/portfolio2.png" alt="">
+                    <p> <b>Practice: Portfolio 2 </b><br>
+                        ./portfolio2/ <br>
+                        HTML/CSS/JAVASCRIPT <br>
+                        Static  
+                    </p>  
+                </a>
+            </li>
+            <li id="webdev-item-2" style="max-height: 500px;">
+                <a href="portfolio3/index.html">
+                    <img  class="thumbnail" src="images/portfolio3.png" alt="">
+                    <p> <b>Practice: Portfolio 3 </b><br>
+                        ./portfolio3/ <br>
+                        HTML/CSS/JAVASCRIPT <br>
+                        Static
+                    </p>
+                </a>
+            </li>
+            <li id="webdev-item-4" style="max-height: 500px;">
+                <a href="dGal/index.html">
+                    <img class="thumbnail" src="images/dgal.png" alt="">
+                    <p> <b>D-Gall </b><br> 
+                        ./dGal/ <br>
+                        HTML/CSS/JAVASCRIPT<br>
+                        Static  
+                    </p>
+                </a>
+            </li>
+            </ul>
+            <button class="donate-button" id="donate-button" title="Buy me a coffee">
+                Buy me a coffee<br>0.0003 ETH
+            </button>
+    </content>
+    <footer>
+        2023 © luka43
+    </footer>
 </body>
-<template data-user-template>
-    <div class="card" onclick="imagePreview(this)">
-        <div class="header" data-header></div>
-        <img class="image-thumb" data-image>
-        <div class="title" data-title></div>
-        <div class="type" data-type></div>
-        <div class="description" data-description></div>
-        <div class="price" data-price></div>
-    </div>
-</template>
 </html>
