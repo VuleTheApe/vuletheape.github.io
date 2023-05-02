@@ -3,11 +3,10 @@ let mybutton = document.getElementById("to-top");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
         mybutton.style.bottom = "15px";
-        mybutton.style.zIndex = "1";
     } else {
-        mybutton.style.bottom = "-52px";
+        mybutton.style.bottom = "-50px";
     }
 }
 

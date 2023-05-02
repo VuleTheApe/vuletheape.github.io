@@ -20,6 +20,7 @@ header {
     width: 100%;
     padding: 15px;
     background-color: #A0BAB1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 12px 12px 0px 0px rgba(47, 64, 71, 0.212);
 }
 banner-title a {
@@ -63,22 +64,24 @@ li:hover {
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    width: 90%;
-    max-width: 1500px;
+    width: 95%;
+    max-width: 1600px;
     margin: 25px;
     padding: 15px;
     background-color: #A0BAB1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 12px 12px 0px 0px rgba(47, 64, 71, 0.212);
 }
 main {
     display: flex;
-    width: 90%;
-    max-width: 1500px;
+    width: 95%;
+    max-width: 1600px;
+    margin-bottom: 50px;
 }
 .card {
     display: flex;
     flex-direction: column;
-    border: solid black 1px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     padding: 5px;
 
@@ -91,16 +94,15 @@ main {
     box-shadow: none;
 }
 .sidebar {
-    position: sticky;
-    top: 17px;
     height: fit-content;
     padding: 10px 5px 10px 5px;
-    margin-right: 5%;
+    margin-right: 25px;
     width: 25%;
     max-width: 250px;
     min-width: 150px;
     border-radius: 8px;
     background-color: #A0BAB1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 12px 12px 0px 0px rgba(47, 64, 71, 0.212);
 }
 .container {
@@ -110,6 +112,7 @@ main {
     padding: 2%;
     border-radius: 8px;
     background-color: #A0BAB1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 12px 12px 0px 0px rgba(47, 64, 71, 0.212);
     align-items: center;
 }
@@ -166,11 +169,11 @@ p {
     display: block;
     position: fixed;
     font-size: 80px;
-    bottom: -52px;
-    left: 20%;
+    bottom: -50px;
+    left: 25px;
     width: 50px;
     padding: 15px;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
