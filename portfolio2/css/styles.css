@@ -84,4 +84,5 @@ img {
     width: min-content;
     height: min-content;
     max-height: 80%;
+    max-width: 80%;
 }
