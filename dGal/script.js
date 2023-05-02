@@ -5,21 +5,32 @@ const userCardContainer = document.querySelector("[data-user-cards-container]")
 const userCardTemplate = document.querySelector("[data-user-template]")
 
 let photos = []
+let value = []
 
 searchInput.addEventListener('input', e => {
-    const value = e.target.value.toLowerCase()
-    photos.forEach(photo => {
-        const isVisible = 
-            photo.artist.toLowerCase().includes(value)  || 
-            photo.title.toLowerCase().includes(value) ||
-            photo.type.toLowerCase().includes(value) ||
-            photo.description.toLowerCase().includes(value) ||
-            photo.price.toLowerCase().includes(value)
-        photo.element.classList.toggle("hide", !isVisible)
-    })
+    var value = e.target.value.toLowerCase().split(" ");
+        photos.forEach(photo => {
+            for (let i=0; i < value.length; i++){
+                if (value[i].length){
+                    console.log(value[i], value[i].length, value.length);
+                    const isVisible =
+                        photo.artist.toLowerCase().includes(value[i])  ||
+                        photo.title.toLowerCase().includes(value[i]) ||
+                        photo.type.toLowerCase().includes(value[i]) ||
+                        photo.description.toLowerCase().includes(value[i]) ||
+                        photo.price.toLowerCase().includes(value[i])
+
+                    photo.element.classList.toggle("hide", !isVisible);
+                    photo.checked = true;
+                    console.log(photo.checked)
+
+                }
+            }
+        }
+    )
 
 
-})
+});
 
 fetch("gallery.json")
     .then(res => res.json())
@@ -50,4 +61,5 @@ fetch("gallery.json")
             userCardContainer.append(card)
             return { artist: photo.artist, title: photo.title, type: photo.type, description: photo.description, price: photo.price, element: card }
         })
+        console.log(photos);
     })

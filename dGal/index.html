@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/scrollbar.css">
+    <script src="script.js" defer></script>
     <title>d-Gal</title>
 </head>
 <body>
     <header id="">
         <banner-title><a href="#">D-Gall</a></banner-title>
     </header>
+    <div class="menu-bar">Menu Bar</div>
     <main>
         <div class="sidebar">
             {ITEM FILTER} <br><br>
             Item tags: <br>
-            <input placeholder="Abstract, Graffiti, Canvas...">
+            <input placeholder="Abstract, Graffiti, Canvas..." data-search>
             <br><br>
             Item category: <br>
             <li>Canvas</li>
@@ -43,50 +45,20 @@
             <button>Search</button>&nbsp;<button>Reset</button>
         </div>
         <div class="container">
-            <div class="item-grid">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-                <img src="1" class="item">
-            </div>
+            <div class="item-grid" data-user-cards-container></div>
             <p> <button>&nbsp;<&nbsp;</button> Page 1/6 <button>&nbsp;>&nbsp;</button></p>
-        </div>
+            </div>
+
     </main>
+    <template data-user-template>
+        <div class="card">
+            <div class="header" data-header></div>
+            <img class="image" data-image>
+            <div class="title" data-title></div>
+            <div class="type" data-type></div>
+            <div class="description" data-description></div>
+            <div class="price" data-price></div>
+        </div>
+    </template>
 </body>
 </html>
