@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/scrollbar.css">
-    <script src="script.js" defer></script>
+    <script src="js/to-top.js" defer></script>
+    <script src="js/gallery.js" defer></script>
     <title>d-Gal</title>
 </head>
 <body id="body">
@@ -50,18 +51,19 @@
             </div>
 
     </main>
-    <template data-user-template>
-        <div class="card" onclick="imagePreview(this)">
-            <div class="header" data-header></div>
-            <img class="image-thumb" data-image>
-            <div class="title" data-title></div>
-            <div class="type" data-type></div>
-            <div class="description" data-description></div>
-            <div class="price" data-price></div>
-        </div>
-    </template>
+    <button onclick="topFunction()" id="to-top" title="Back to top"><h2>^</h2></button>
     <div class="image-preview-box" id="image-preview-box" onclick="closeImagePreview()">
         <img src="" id="image-preview" class="image-preview">
     </div>
 </body>
+<template data-user-template>
+    <div class="card" onclick="imagePreview(this)">
+        <div class="header" data-header></div>
+        <img class="image-thumb" data-image>
+        <div class="title" data-title></div>
+        <div class="type" data-type></div>
+        <div class="description" data-description></div>
+        <div class="price" data-price></div>
+    </div>
+</template>
 </html>
