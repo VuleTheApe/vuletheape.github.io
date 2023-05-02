@@ -9,7 +9,7 @@
     <script src="script.js" defer></script>
     <title>d-Gal</title>
 </head>
-<body>
+<body id="body">
     <header id="">
         <banner-title><a href="#">D-Gall</a></banner-title>
     </header>
@@ -17,8 +17,8 @@
     <main>
         <div class="sidebar">
             {ITEM FILTER} <br><br>
-            Item tags: <br>
-            <input placeholder="Abstract, Graffiti, Canvas..." data-search>
+
+            <input placeholder="Artist name" data-search>
             <br><br>
             Item category: <br>
             <li>Canvas</li>
@@ -53,15 +53,15 @@
     <template data-user-template>
         <div class="card" onclick="imagePreview(this)">
             <div class="header" data-header></div>
-            <img class="image" data-image>
+            <img class="image-thumb" data-image>
             <div class="title" data-title></div>
             <div class="type" data-type></div>
             <div class="description" data-description></div>
             <div class="price" data-price></div>
         </div>
     </template>
-    <div class="image-preview-box" id="image-preview-box" onclick="closeImagePreview()" >
-        <img src="" id="image-preview" class="image-preview" >
+    <div class="image-preview-box" id="image-preview-box" onclick="closeImagePreview()">
+        <img src="" id="image-preview" class="image-preview">
     </div>
 </body>
 </html>
