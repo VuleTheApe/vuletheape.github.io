@@ -22,14 +22,14 @@
             <input placeholder="Artist name" data-search>
             <br><br>
             Item category: <br>
-            <li>Canvas</li>
-            <li>Paper</li>
-            <li>Glass</li>
-            <li>Plastic</li>
-            <li>Metal</li>
-            <li>Sculpture</li>
-            <li>Clothes</li>
-            <li>Toys</li>
+            <ul id="item-category">
+            <li onclick="filterCategory('canvas')">Canvas</li>
+            <li onclick="filterCategory('print')">Print</li>
+            <li onclick="filterCategory('sculpture')">Sculpture</li>
+            <li onclick="filterCategory('mold casting')">Mold casting</li>
+            <li onclick="filterCategory('analog photo')">Analog photo</li>
+            <li onclick="filterCategory('all')">All</li>
+            </ul>
             <br>
             Item year: <br>
             From: <input placeholder="1987"> <br>
@@ -47,7 +47,6 @@
         </div>
         <div class="container">
             <div class="item-grid" data-user-cards-container></div>
-            <p> <button>&nbsp;<&nbsp;</button> Page 1/6 <button>&nbsp;>&nbsp;</button></p>
             </div>
 
     </main>

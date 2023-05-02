@@ -2,19 +2,44 @@ const searchInput = document.querySelector("[data-search]")
 const userCardContainer = document.querySelector("[data-user-cards-container]")
 const userCardTemplate = document.querySelector("[data-user-template]")
 
-let photos = []
-let value = []
+var category = "";
+var photos = [];
+var value = [];
 
 searchInput.addEventListener('input', e => {
+    console.log(category);
     var value = e.target.value.toLowerCase().split(" ");
         photos.forEach(photo => {
+            if (category != ""){
                     const isVisible =
-                        photo.artist.toLowerCase().includes(value);
-
+                        photo.artist.toLowerCase().includes(value) && photo.type.toLowerCase().includes(category.toLowerCase());
                     photo.element.classList.toggle("hide", !isVisible);
+            } else {
+                const isVisible =
+                            photo.artist.toLowerCase().includes(value);
+                        photo.element.classList.toggle("hide", !isVisible);
+            }
         }
     )
 });
+
+function filterCategory (value) {
+
+    if (value.toLowerCase() === "all") {
+        category = "";
+        photos.forEach(photo => {
+            photo.element.classList.toggle("hide", false);
+        })
+    } else {
+        category = value;
+        photos.forEach(photo => {
+            const isVisible =
+                photo.type.toLowerCase().includes(value.toLowerCase());
+
+            photo.element.classList.toggle("hide", !isVisible);
+        })
+    }
+}
 
 fetch("gallery.json")
     .then(res => res.json())
