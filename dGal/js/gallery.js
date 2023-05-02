@@ -11,10 +11,11 @@ updateGallery();
 filterCategory(category);
 
 searchInput.addEventListener('input', e => {
-    console.log(category);
-    var value = e.target.value.toLowerCase().split(" ");
+    var value = e.target.value.toLowerCase();
     artistt = value;
+
         photos.forEach(photo => {
+
             if (category != "all"){
                     const isVisible =
                         photo.artist.toLowerCase().includes(value) && photo.type.toLowerCase().includes(category.toLowerCase());
