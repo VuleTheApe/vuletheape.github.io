@@ -36,6 +36,27 @@ banner-title a:hover {
 banner-title a:active {
     color: black;
 }
+ul {
+    text-indent: 10px;
+    list-style: circle;
+    list-style-position: inside;
+}
+li {
+    font-weight: normal;
+    padding: 1px;
+    transition: all 0.2s ease;
+}
+li:hover {
+
+    list-style-type:disc;
+    font-weight: bold;
+
+}
+.active-item {
+    list-style-type:disc;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
 .menu-bar {
     display: flex;
     flex-direction: column;
@@ -157,8 +178,4 @@ p {
 }
 #to-top:hover {
     background-color: #89c19c;
-}
-ul {
-    text-indent: 10px;
-    list-style:inside;
 }

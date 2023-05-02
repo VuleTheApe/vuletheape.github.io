@@ -1,16 +1,19 @@
+
 const searchInput = document.querySelector("[data-search]")
 const userCardContainer = document.querySelector("[data-user-cards-container]")
 const userCardTemplate = document.querySelector("[data-user-template]")
 
-var category = "";
+var artistt = "";
+var category = "all";
 var photos = [];
 var value = [];
 
 searchInput.addEventListener('input', e => {
     console.log(category);
     var value = e.target.value.toLowerCase().split(" ");
+    artistt = value;
         photos.forEach(photo => {
-            if (category != ""){
+            if (category != "all"){
                     const isVisible =
                         photo.artist.toLowerCase().includes(value) && photo.type.toLowerCase().includes(category.toLowerCase());
                     photo.element.classList.toggle("hide", !isVisible);
@@ -23,22 +26,36 @@ searchInput.addEventListener('input', e => {
     )
 });
 
-function filterCategory (value) {
-
+function filterCategory(value) {
+    console.log(artistt);
     if (value.toLowerCase() === "all") {
-        category = "";
-        photos.forEach(photo => {
-            photo.element.classList.toggle("hide", false);
+
+        if (artistt === "" || artistt === " ") {
+            photos.forEach(photo => {
+                photo.element.classList.toggle("hide", false);
+            })
+        }
+        else {
+            photos.forEach(photo => {
+                const isVisible =
+                    photo.artist.toLowerCase().includes(artistt)
+                photo.element.classList.toggle("hide", !isVisible);
         })
+    }
     } else {
-        category = value;
+        category = value.toLowerCase();
         photos.forEach(photo => {
             const isVisible =
-                photo.type.toLowerCase().includes(value.toLowerCase());
+                photo.type.toLowerCase().includes(category) && photo.artist.toLowerCase().includes(artistt);
 
             photo.element.classList.toggle("hide", !isVisible);
         })
     }
+
+    for(let i=0; i<document.getElementById("item-category").children.length; i++){
+        document.getElementById("item-category").children[i].classList.toggle("active-item", false)
+    }
+    document.getElementById(value).classList.toggle("active-item", true);
 }
 
 fetch("gallery.json")
@@ -78,4 +95,17 @@ function closeImagePreview() {
         document.getElementById("image-preview-box").style.display = "none";
         document.getElementById("image-preview").src = "";
         document.getElementById("body").style = "overflow: auto"
+}
+function clearInputs() {
+    artistt = "";
+    category = "all";
+    filterCategory("all");
+    document.getElementById("artist").value = "";
+    document.getElementById("year-from").value = "";
+    document.getElementById("year-to").value = "";
+    document.getElementById("price-current-from").value = "";
+    document.getElementById("price-current-to").value = "";
+    document.getElementById("price-last-from").value = "";
+    document.getElementById("price-last-to").value = "";
+
 }

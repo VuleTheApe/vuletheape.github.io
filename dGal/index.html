@@ -19,31 +19,31 @@
         <div class="sidebar">
             {ITEM FILTER} <br><br>
 
-            <input placeholder="Artist name" data-search>
+            <input id="artist" type="search" placeholder="Artist name" data-search>
             <br><br>
             Item category: <br>
             <ul id="item-category">
-            <li onclick="filterCategory('canvas')">Canvas</li>
-            <li onclick="filterCategory('print')">Print</li>
-            <li onclick="filterCategory('sculpture')">Sculpture</li>
-            <li onclick="filterCategory('mold casting')">Mold casting</li>
-            <li onclick="filterCategory('analog photo')">Analog photo</li>
-            <li onclick="filterCategory('all')">All</li>
+            <li id="canvas" onclick="filterCategory('canvas')">Canvas</li>
+            <li id="print" onclick="filterCategory('print')">Print</li>
+            <li id="sculpture" onclick="filterCategory('sculpture')">Sculpture</li>
+            <li id="mold casting" onclick="filterCategory('mold casting')">Mold casting</li>
+            <li id="analog photo" onclick="filterCategory('analog photo')">Analog photo</li>
+            <li id="all" onclick="filterCategory('all')">All</li>
             </ul>
             <br>
             Item year: <br>
-            From: <input placeholder="1987"> <br>
-            To: <input placeholder="2023"> <br>
+            From: <input id="year-from" placeholder="1987"> <br>
+            To: <input id="year-to" placeholder="2023"> <br>
             <br>
             Item price-current: <br>
-            From: <input placeholder="10"> <br>
-            To: <input placeholder="15000"> <br>
+            From: <input id="price-current-from" placeholder="10"> <br>
+            To: <input id="price-current-to" placeholder="15000"> <br>
             <br>
             Item price-last: <br>
-            From: <input placeholder="10"> <br>
-            To: <input placeholder="15000"> <br>
+            From: <input id="price-last-from" placeholder="10"> <br>
+            To: <input id="price-last-to" placeholder="15000"> <br>
             <br>
-            <button>Search</button>&nbsp;<button>Reset</button>
+            <button onclick="clearInputs()">Reset</button>
         </div>
         <div class="container">
             <div class="item-grid" data-user-cards-container></div>
