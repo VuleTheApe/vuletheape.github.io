@@ -7,6 +7,8 @@ var artistt = "";
 var category = "all";
 var photos = [];
 var value = [];
+updateGallery();
+filterCategory(category);
 
 searchInput.addEventListener('input', e => {
     console.log(category);
@@ -58,32 +60,6 @@ function filterCategory(value) {
     document.getElementById(value).classList.toggle("active-item", true);
 }
 
-fetch("gallery.json")
-    .then(res => res.json())
-    .then(data => {
-        photos = data.map(photo => {
-
-            const card = userCardTemplate.content.cloneNode(true).children[0]
-
-            const header = card.querySelector("[data-header]")
-            const image = card.querySelector("[data-image]")
-            const title = card.querySelector("[data-title]")
-            const type = card.querySelector("[data-type")
-            const description = card.querySelector("[data-description]")
-            const price = card.querySelector("[data-price]")
-
-            header.textContent = photo.artist
-            image.src = photo.url
-            title.textContent = photo.title
-            type.textContent = photo.type
-            description.textContent = photo.description
-            price.textContent = photo.price
-
-            userCardContainer.append(card)
-            return { artist: photo.artist, title: photo.title, type: photo.type, description: photo.description, price: photo.price, element: card }
-        })
-    })
-
 function imagePreview(element) {
         url = element.querySelector("[data-image").src
         document.getElementById("image-preview-box").style.display = "flex";
@@ -108,4 +84,31 @@ function clearInputs() {
     document.getElementById("price-last-from").value = "";
     document.getElementById("price-last-to").value = "";
 
+}
+function updateGallery() {
+    fetch("gallery.json")
+    .then(res => res.json())
+    .then(data => {
+        photos = data.map(photo => {
+
+            const card = userCardTemplate.content.cloneNode(true).children[0]
+
+            const header = card.querySelector("[data-header]")
+            const image = card.querySelector("[data-image]")
+            const title = card.querySelector("[data-title]")
+            const type = card.querySelector("[data-type")
+            const description = card.querySelector("[data-description]")
+            const price = card.querySelector("[data-price]")
+
+            header.textContent = photo.artist
+            image.src = photo.url
+            title.textContent = photo.title
+            type.textContent = photo.type
+            description.textContent = photo.description
+            price.textContent = photo.price
+
+            userCardContainer.append(card)
+            return { artist: photo.artist, title: photo.title, type: photo.type, description: photo.description, price: photo.price, element: card }
+        })
+    })
 }

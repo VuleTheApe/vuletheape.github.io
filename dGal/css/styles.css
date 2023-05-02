@@ -92,6 +92,9 @@ main {
     box-shadow: none;
 }
 .sidebar {
+    position: sticky;
+    top: 17px;
+    height: 600px;
     padding: 1%;
     margin-right: 5%;
     width: 25%;
