@@ -51,7 +51,7 @@
 
     </main>
     <template data-user-template>
-        <div class="card">
+        <div class="card" onclick="imagePreview(this)">
             <div class="header" data-header></div>
             <img class="image" data-image>
             <div class="title" data-title></div>
@@ -60,5 +60,8 @@
             <div class="price" data-price></div>
         </div>
     </template>
+    <div class="image-preview-box" id="image-preview-box" onclick="closeImagePreview()" >
+        <img src="" id="image-preview" class="image-preview" >
+    </div>
 </body>
 </html>

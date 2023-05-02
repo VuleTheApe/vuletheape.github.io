@@ -7,6 +7,8 @@ const userCardTemplate = document.querySelector("[data-user-template]")
 let photos = []
 let value = []
 
+
+
 searchInput.addEventListener('input', e => {
     var value = e.target.value.toLowerCase().split(" ");
         photos.forEach(photo => {
@@ -63,3 +65,12 @@ fetch("gallery.json")
         })
         console.log(photos);
     })
+function imagePreview(element) {
+        url = element.querySelector("[data-image").src
+        document.getElementById("image-preview-box").style.display = "flex";
+        document.getElementById("image-preview").src = url;
+}
+function closeImagePreview() {
+        document.getElementById("image-preview-box").style.display = "none";
+        document.getElementById("image-preview").src = "";
+}
