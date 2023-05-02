@@ -143,7 +143,7 @@ p {
 }
 .image-preview-box {
     display: none;
-    position: fixed;    
+    position: fixed;
     justify-content: center;
     align-items: center;
     top:0px;
@@ -160,7 +160,7 @@ p {
 }
 .hide {
     display: none;
-} 
+}
 #to-top {
     display: block;
     position: fixed;
