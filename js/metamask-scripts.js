@@ -14,7 +14,7 @@ document.getElementById("wallet-connect").addEventListener("click", () => {
 
 document.getElementById("donate-button").addEventListener("click", () => {
     params = [{
-          from: accountAddress,
+          from: accounts[0],
           to: '0x95686ebdE122E369c12409ECFA94ab08b0610246',
           value: '0xAA87BEE538000',
         }];
