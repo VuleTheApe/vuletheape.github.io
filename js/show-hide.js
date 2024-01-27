@@ -21,6 +21,29 @@ document.getElementById("python-title").addEventListener("click", () =>{
     }
 });
 
+document.getElementById("csharp-title").addEventListener("click", () =>{
+
+    var list = document.getElementById("csharp-list").children;
+    var dropdownIcon = document.getElementById("csharp-plus-icon");
+
+    if (list[0].style.maxHeight === "0px") {
+
+        dropdownIcon.src = "images/icons/minus-icon.png";
+
+        for (let i = 0; i < list.length; i++){
+            list[i].style.maxHeight = "500px";
+        }
+    }
+    else if (list[0].style.maxHeight === "500px"){
+
+        dropdownIcon.src = "images/icons/plus-icon.png";
+
+        for (let i = 0; i < list.length; i++){
+            list[i].style.maxHeight = "0px";
+        }
+    }
+});
+
 document.getElementById("webdev-title").addEventListener("click", () =>{
 
     var list = document.getElementById("webdev-list").children;
